@@ -7,6 +7,7 @@
     &__inner {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         padding: 50px 0;
     }
 }
@@ -20,6 +21,77 @@
         margin-left: 35px;
     }
 
+    &__list-link {
+        font-size: 15px;
+        line-height: 12px;
+        text-transform: capitalize;
+        color: $accent;
+        @extend %rubik-500;
+    }
+}
+
+.user-nav {
+    display: flex;
+    gap: 0 20px;
+
+    &__link {
+        display: flex;
+        align-items: center;
+    }
+
+    &__link--search {
+        width: 50px;
+        height: 50px;
+        background-color: #edf1f4;
+        border-radius: 50%;
+    }
+
+    &__link-img {
+        margin: 0 auto;
+    }
+
+
+    &__group-btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 180px;
+        height: 50px;
+        background-color: #fcd7b6;
+        border-radius: 25px;
+    }
+
+    &__test {
+        height: 32px;
+        font-size: 0;
+        border-right: 1px solid #fff;
+    }
+
+    &__link--group {
+        position: relative;
+    }
+
+    &__num {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        top: -9px;
+        right: -9px;
+        background-color: #fff;
+        color: $title;
+        border-radius: 50%;
+        font-size: 10px;
+        text-align: center;
+        line-height: 16px;
+    }
+
+
+    &__link--ellipse {
+        width: 50px;
+        height: 50px;
+        background-color: #a3bbc8;
+        border-radius: 50%;
+    }
 }
 
 @import "media";
