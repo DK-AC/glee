@@ -1,0 +1,25 @@
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "global";
+
+.header {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        padding: 50px 0;
+    }
+}
+
+.menu {
+    &__list {
+        display: flex;
+    }
+
+    &__list-item + .menu__list-item {
+        margin-left: 35px;
+    }
+
+}
+
+@import "media";
