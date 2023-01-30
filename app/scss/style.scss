@@ -1,6 +1,7 @@
 @import "vars";
 @import "fonts";
 @import "reset";
+@import "libs";
 @import "global";
 
 .header {
@@ -56,7 +57,7 @@
         justify-content: space-evenly;
         width: 180px;
         height: 50px;
-        background-color: #fcd7b6;
+        background-color: $bg;
         border-radius: 25px;
     }
 
@@ -175,10 +176,7 @@
     }
 
     &__btn {
-        border: none;
-        background-color: #a3bbc8;
-        color: #fff;
-        cursor: pointer;
+        @extend %btn;
         padding: 4px 13px;
         margin-left: -4px;
     }
@@ -208,6 +206,94 @@
     &__link {
         color: $default;
     }
+}
+
+.top-slider {
+
+    &__container {
+        background-color: $bg;
+        padding: 225px 0 50px;
+        position: relative;
+        min-height: 820px;
+    }
+
+    &__circle {
+        position: absolute;
+        top: 100px;
+        right: 100px;
+        border-radius: 50%;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+        width: 634px;
+        height: 634px;
+        z-index: 1;
+    }
+
+    &__item {
+        display: flex !important;
+        justify-content: space-between;
+        margin-bottom: 220px;
+    }
+
+    &__title {
+        font-size: 72px;
+        line-height: 70px;
+        color: $title;
+        max-width: 440px;
+        margin-bottom: 40px;
+    }
+
+    &__text {
+        font-size: 18px;
+        line-height: 30px;
+        color: $accent;
+        max-width: 360px;
+        margin-bottom: 40px;
+    }
+
+    &__img {
+        margin-top: 60px;
+    }
+
+    &__link {
+        @extend %rubik-500;
+        @extend %btn;
+        font-size: 15px;
+        line-height: 12px;
+        padding: 21px 22px 21px 30px;
+
+        img {
+            display: inline-block;
+            padding-left: 50px;
+        }
+    }
+
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+
+        li {
+            button {
+                border: none;
+                padding: 0;
+                font-size: 11px;
+                line-height: 9px;
+                color: $title;
+                background-color: #ffffff;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                margin-left: 15px;
+                cursor: pointer;
+                opacity: 0.3;
+            }
+        }
+
+        .slick-active button {
+            opacity: 1;
+        }
+    }
+
+
 }
 
 @import "media";
