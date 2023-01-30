@@ -1,9 +1,37 @@
+html,
 body {
-
+    height: 100%;
 }
 
-.container {
-    width: 1800px;
+body {
+    font-size: 16px;
+    line-height: 30px;
+    color: $default;
+    display: flex;
+    flex-direction: column;
+    @extend %dmsans-400;
+}
+
+.big-container {
+    max-width: 1800px;
     margin: 0 auto;
     padding: 0 15px;
 }
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+%btn {
+    background-color: #a3bbc8;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
