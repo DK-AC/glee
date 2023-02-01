@@ -57,7 +57,7 @@
         justify-content: space-evenly;
         width: 180px;
         height: 50px;
-        background-color: $bg;
+        background-color: $bg-accent;
         border-radius: 25px;
     }
 
@@ -211,7 +211,7 @@
 .top-slider {
 
     &__container {
-        background-color: $bg;
+        background-color: $bg-accent;
         padding: 225px 0 50px;
         position: relative;
         min-height: 820px;
@@ -261,9 +261,8 @@
         line-height: 12px;
         padding: 21px 22px 21px 30px;
 
-        img {
-            display: inline-block;
-            padding-left: 50px;
+        svg {
+            margin-left: 50px;
         }
     }
 
@@ -294,7 +293,7 @@
     }
 }
 
-.features {
+.features-top {
 
     &__container {
         background-color: #fef7f0;
@@ -359,4 +358,188 @@
     }
 }
 
+.week-products {
+    padding: 75px 0 185px;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        margin-bottom: 40px;
+    }
+
+    &__filter {
+        display: flex;
+        gap: 0 30px;
+    }
+
+    &__btn {
+        padding: 0;
+        border: none;
+        font-size: 16px;
+        color: $default;
+        background-color: transparent;
+        cursor: pointer;
+        margin-bottom: 80px;
+        @extend %dmsans-700;
+    }
+
+    &__btn--active {
+        color: #1a1a1a;
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 40px 0;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        width: 270px;
+        height: 380px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
+        padding: 0 0 40px;
+        position: relative;
+
+        &:hover {
+            background-color: $bg;
+            transition: all .3s;
+
+            .week-products__icons {
+                visibility: visible;
+
+            }
+        }
+    }
+
+    &__item-img {
+        margin-bottom: 60px;
+    }
+
+    &__item-title {
+        @extend %dmsans-500;
+        line-height: 1;
+        color: $title;
+        margin-bottom: 15px;
+    }
+
+    &__item-price {
+        @extend %dmsans-700;
+        line-height: 1;
+        color: $primary;
+    }
+
+    &__icons {
+        display: flex;
+        gap: 0 15px;
+        position: absolute;
+        bottom: 170px;
+        visibility: hidden;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: #ffffff;
+        box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
+        width: 45px;
+        height: 45px;
+
+
+        &:hover {
+            background-color: $primary;
+            transition: all .3s;
+
+            path {
+                fill: #ffffff;
+            }
+        }
+    }
+}
+
+.features-bottom {
+
+    &__inner {
+        display: flex;
+        gap: 0 30px;
+    }
+
+    &__item {
+        background-color: #feefe2;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        flex-grow: 2;
+        min-height: 390px;
+        padding-left: 430px;
+        @media (max-width: 1440px) {
+            padding-left: 300px;
+        }
+    }
+
+    &__title {
+        font-size: 26px;
+        line-height: 32px;
+        color: $title;
+        @extend %dmsans-700;
+        margin-bottom: 20px;
+        max-width: 330px;
+    }
+
+    &__text {
+        color: $title;
+        @extend %rubik-400;
+        margin-bottom: 25px;
+        max-width: 330px;
+    }
+
+    &__link {
+        @extend %rubik-500;
+        @extend %btn;
+        font-size: 15px;
+        line-height: 12px;
+        color: $accent;
+        padding: 23px 20px;
+        border-radius: 5px;
+        background-color: transparent;
+        border: 1px solid #b3b7b5;
+
+        svg {
+            margin-left: 40px;
+        }
+
+        path {
+            display: inline-block;
+            fill: $accent;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        bottom: 90px;
+        right: 500px;
+        @media (max-width: 1440px) {
+            position: absolute;
+            bottom: 90px;
+            right: 420px;
+        }
+    }
+}
+
+
 @import "media";
+
