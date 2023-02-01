@@ -1,6 +1,7 @@
 html,
 body {
     height: 100%;
+
 }
 
 body {
@@ -13,7 +14,7 @@ body {
 }
 
 .big-container {
-    max-width: 1770px;
+    max-width: 1800px;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -29,9 +30,15 @@ body {
 }
 
 %btn {
-    background-color: #a3bbc8;
+    background-color: $primary;
     border: none;
     color: #fff;
     cursor: pointer;
+}
+
+.title {
+    @extend %dmsans-700;
+    font-size: 36px;
+    color: #191919;
 }
 
