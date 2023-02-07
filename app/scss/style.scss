@@ -772,7 +772,7 @@
     }
 }
 
-.login-page {
+.modal {
     padding: 120px 0;
 
     &__form {
@@ -847,6 +847,10 @@
         color: $title;
         @extend %rubik-500;
         font-size: 18px;
+    }
+
+    &__text {
+        margin: 15px 0;
     }
 }
 
