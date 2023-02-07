@@ -42,3 +42,23 @@ body {
     color: #191919;
 }
 
+.filter {
+    display: flex;
+    gap: 0 30px;
+
+    &__btn {
+        padding: 0;
+        border: none;
+        font-size: 16px;
+        color: $default;
+        background-color: transparent;
+        cursor: pointer;
+        margin-bottom: 70px;
+        @extend %dmsans-700;
+    }
+
+    &__btn--active {
+        color: #1a1a1a;
+    }
+}
+
