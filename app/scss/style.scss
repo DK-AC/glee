@@ -623,6 +623,108 @@
     }
 }
 
+.blog {
+    padding: 120px 0 90px;
+    background: linear-gradient(to bottom, white 435px, #fef7f0 443px);
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 45px;
+
+        img {
+            display: inline;
+            margin-left: 10px;
+        }
+    }
+
+    &__link {
+        font-weight: bold;
+        color: #262626;
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        gap: 0 30px;
+    }
+
+    &__item {
+        max-width: 370px;
+        width: 100%;
+        background-color: #ffffff;
+    }
+
+    &__item-imgLink {
+        position: relative;
+
+        &::after {
+            content: 'news';
+            position: absolute;
+            width: 102px;
+            height: 30px;
+            border-radius: 15px;
+            color: #ffffff;
+            background-color: $primary;
+            text-transform: uppercase;
+            bottom: -15px;
+            left: 15px;
+            z-index: 3;
+            text-align: center;
+        }
+
+    }
+
+    &__item-img {
+        object-fit: cover;
+    }
+
+    &__item-wrapper {
+        padding: 35px 28px;
+    }
+
+    &__item-title {
+        display: inline-block;
+        line-height: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #e0e0e0;
+        min-height: 85px;
+        margin-bottom: 23px;
+    }
+
+    &__item-titleLink {
+        color: #262626;
+        font-size: 18px;
+        @extend %dmsans-500;
+    }
+
+    &__item-box {
+        display: flex;
+
+        a {
+            color: #222933;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+    }
+
+    &__item-date {
+        margin-right: 30px;
+    }
+}
+
+.partners {
+    padding-top: 100px;
+
+    &__list {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
+
 
 @import "media";
 
