@@ -101,7 +101,7 @@
 }
 
 .footer-top {
-    border-bottom: 1px solid $default;
+    border-bottom: 1px solid #dae4e9;
 
     &__inner {
         display: flex;
@@ -629,6 +629,11 @@
     padding: 120px 0 90px;
     background: linear-gradient(to bottom, white 435px, #fef7f0 443px);
 
+    &__about--page {
+        padding-bottom: 0;
+    }
+
+
     &__inner {
         display: flex;
         justify-content: space-between;
@@ -855,6 +860,10 @@
 }
 
 .about {
+    &__title--page {
+        color: $title;
+    }
+
     &__content {
         padding: 120px 0;
     }
@@ -891,7 +900,6 @@
 
     &__title {
         margin-bottom: 45px;
-        color: $title;
     }
 
     &__text {
@@ -948,10 +956,14 @@
         line-height: 17px;
         color: #4c4c4c;
     }
+
+    &__link-page {
+        color: $title;
+    }
 }
 
 .about-info {
-    padding: 100px 0 80px;
+    padding: 80px 0;
     background-color: $bg-accent;
 
     &__items {
@@ -1015,9 +1027,7 @@
     }
 
     &__title {
-        color: inherit;
         margin-bottom: 30px;
-        @extend %dmsans-700;
     }
 
     &__text {
