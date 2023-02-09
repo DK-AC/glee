@@ -626,13 +626,8 @@
 }
 
 .blog {
-    padding: 120px 0 90px;
+    padding-top: 120px;
     background: linear-gradient(to bottom, white 435px, #fef7f0 443px);
-
-    &__about--page {
-        padding-bottom: 0;
-    }
-
 
     &__inner {
         display: flex;
@@ -723,7 +718,7 @@
 }
 
 .partners {
-    padding-top: 100px;
+    padding: 100px 0 90px;
 
     &__list {
         display: flex;
@@ -1103,6 +1098,41 @@
         justify-content: center;
         align-items: center;
     }
+}
+
+.terms {
+    padding-top: 120px;
+
+    &__inner {
+        color: $title;
+    }
+
+    &__item {
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        margin-bottom: 60px;
+    }
+
+    &__lists {
+        list-style-type: decimal-leading-zero;
+        margin-left: 25px;
+    }
+
+    &__list {
+        padding-left: 10px;
+        margin-bottom: 20px;
+        @extend %rubik-400;
+    }
+
+    &__item-title {
+        font-size: 24px;
+        @extend %rubik-500;
+        line-height: 1.667;
+        margin-bottom: 10px;
+    }
+
 }
 
 @import "media";
