@@ -1159,7 +1159,12 @@
             top: 15px;
             margin-left: 15px;
             background-color: $primary;
+            opacity: 0.6;
         }
+    }
+
+    &__item {
+        margin-bottom: 45px;
     }
 }
 
@@ -1176,7 +1181,7 @@
     &__input {
         @extend %checkbox-hidden;
 
-        &:checked + .filter-category__checkbox {
+        &:checked + .filter-category__radio {
             background-color: #edf1f4;
             border-radius: 5px;
         }
@@ -1191,7 +1196,63 @@
         padding: 10px 22px 10px 15px;
 
     }
+}
 
+.filter-price {
+
+    &__title {
+        margin-bottom: 0;
+    }
+
+    &__input {
+    }
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        @extend %rubik-400;
+        color: $title;
+
+    }
+
+    .irs {
+        margin-bottom: 12px;
+
+        &-line {
+            border-radius: 0;
+            background-color: $primary;
+            opacity: 0.6;
+            height: 3px;
+            top: 28px;
+        }
+
+        &-to,
+        &-from,
+        &-min,
+        &-max,
+        &-single {
+            display: none;
+        }
+
+        &-bar {
+            background-color: $primary;
+            opacity: 1;
+            height: 4px;
+            top: 28px;
+
+        }
+
+        &-handle {
+            width: 15px;
+            height: 15px;
+            background-color: $primary;
+
+            i:first-child {
+                display: none;
+            }
+        }
+    }
 }
 
 @import "media";
