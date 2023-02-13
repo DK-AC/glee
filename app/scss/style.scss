@@ -1172,6 +1172,7 @@
     &__form {
         display: flex;
         flex-direction: column;
+        row-gap: 5px;
     }
 
     &__label {
@@ -1205,15 +1206,18 @@
     }
 
     &__input {
+        border: none;
+        padding-bottom: 50px;
     }
 
-    &__box {
+    &__label {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         font-size: 14px;
+
         @extend %rubik-400;
         color: $title;
-
     }
 
     .irs {
@@ -1231,28 +1235,59 @@
         &-from,
         &-min,
         &-max,
-        &-single {
+        &-single,
+        &-handle i:first-child {
             display: none;
         }
 
         &-bar {
+            display: block;
             background-color: $primary;
             opacity: 1;
             height: 4px;
             top: 28px;
-
         }
 
         &-handle {
             width: 15px;
             height: 15px;
             background-color: $primary;
-
-            i:first-child {
-                display: none;
-            }
         }
     }
+}
+
+
+.filter-brand {
+    color: $title;
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+    }
+
+    &__label {
+        cursor: pointer;
+
+    }
+
+    &__input {
+        @extend %checkbox-hidden;
+
+        &:checked + .filter-brand__checkbox {
+            background-color: #edf1f4;
+            border-radius: 5px;
+        }
+    }
+
+    &__checkbox {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 22px 10px 15px;
+
+    }
+
+
 }
 
 @import "media";
