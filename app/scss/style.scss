@@ -373,25 +373,25 @@
         margin-bottom: 40px;
     }
 
-    &__filter {
-        display: flex;
-        gap: 0 30px;
-    }
-
-    &__btn {
-        padding: 0;
-        border: none;
-        font-size: 16px;
-        color: $default;
-        background-color: transparent;
-        cursor: pointer;
-        margin-bottom: 80px;
-        @extend %dmsans-700;
-    }
-
-    &__btn--active {
-        color: #1a1a1a;
-    }
+    //&__filter {
+    //    display: flex;
+    //    gap: 0 30px;
+    //}
+    //
+    //&__btn {
+    //    padding: 0;
+    //    border: none;
+    //    font-size: 16px;
+    //    color: $default;
+    //    background-color: transparent;
+    //    cursor: pointer;
+    //    margin-bottom: 80px;
+    //    @extend %dmsans-700;
+    //}
+    //
+    //&__btn--active {
+    //    color: #1a1a1a;
+    //}
 
     &__items {
         display: flex;
@@ -1131,6 +1131,65 @@
         @extend %rubik-500;
         line-height: 1.667;
         margin-bottom: 10px;
+    }
+}
+
+.catalog {
+    padding: 120px 0;
+
+    &__filters {
+        max-width: 270px;
+    }
+}
+
+.filter {
+    &__title {
+        font-size: 18px;
+        @extend %dmsans-700;
+        color: $title;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 39px;
+            height: 3px;
+            top: 15px;
+            margin-left: 15px;
+            background-color: $primary;
+        }
+    }
+}
+
+.filter-category {
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__label {
+        cursor: pointer;
+    }
+
+    &__input {
+        @extend %checkbox-hidden;
+
+        &:checked + .filter-category__checkbox {
+            background-color: #edf1f4;
+            border-radius: 5px;
+        }
+    }
+
+    &__radio {
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
+        @extend %rubik-400;
+        color: $title;
+        padding: 10px 22px 10px 15px;
+
     }
 
 }
