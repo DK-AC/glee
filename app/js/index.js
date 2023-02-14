@@ -17,5 +17,14 @@ $(function () {
             $('.filter-price__to').text(`$${data.to}`)
         },
     })
+
+    $('.stars').rateYo({
+        normalFill: '#d6d6d6',
+        spacing: '8px',
+        ratedFill: '#ffcc00',
+        readOnly: 'true',
+        starWidth: '11px',
+    })
 })
+
 
