@@ -62,7 +62,45 @@ body {
     }
 }
 
-.blog__about-title--page {
+.pagination {
+    display: flex;
+    justify-content: center;
+    @extend %rubik-400;
+    color: $title;
 
+    &__list {
+        display: flex;
+        justify-content: center;
+        column-gap: 15px;
+        margin-right: 15px;
+    }
+
+    &__item {
+        width: 48px;
+        height: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $primary;
+        cursor: pointer;
+    }
+
+    &__next {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $title;
+        width: 73px;
+        height: 48px;
+        padding: 0 12px;
+        border: 1px solid $primary;
+
+    }
+
+    &__item--active {
+        color: #ffffff;
+        background-color: $primary;
+        cursor: default;
+    }
 }
 
