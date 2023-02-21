@@ -7,6 +7,22 @@ $(function () {
         autoplaySpeed: 3000,
     })
 
+    $('.product-slide__thumb').slick({
+        asNavFor: '.product-slide__big',
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        vertical: true,
+        focusOnSelect: true,
+        draggable: false,
+    })
+
+    $('.product-slide__big').slick({
+        arrows: false,
+        fade: true,
+        asNavFor: '.product-slide__thumb',
+        draggable: false,
+    })
+
     $('.filter-price__input').ionRangeSlider({
         onStart: function (data) {
             $('.filter-price__from').text(`$${data.from}`)
