@@ -32,12 +32,12 @@ $(function () {
     })
 
     $('.btn-list').on('click', function () {
-        $('.product-item').addClass('products-item--list')
+        $('.product-item').addClass('product-item--list')
         $('.catalog__items-grid').addClass('catalog__items-list')
     })
 
     $('.btn-grid').on('click', function () {
-        $('.product-item').removeClass('products-item--list')
+        $('.product-item').removeClass('product-item--list')
         $('.catalog__items-grid').removeClass('catalog__items-list')
     })
 
