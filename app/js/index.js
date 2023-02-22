@@ -23,6 +23,14 @@ $(function () {
         draggable: false,
     })
 
+    $('.products-related--items').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        infinite: true,
+        autoplaySpeed: 3000,
+    })
+
     $('.filter-price__input').ionRangeSlider({
         onStart: function (data) {
             $('.filter-price__from').text(`$${data.from}`)
