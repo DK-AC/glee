@@ -1549,12 +1549,12 @@
         font-size: 18px;
         @extend %rubik-500;
         transition: all .3s;
+    }
 
-        &:hover {
-            background-color: $primary;
-            color: #ffffff;
-            transition: all .3s;
-        }
+    &__btn--active {
+        background-color: $primary;
+        color: #ffffff;
+        transition: all .3s;
     }
 
     &__text {
@@ -1718,7 +1718,6 @@
     }
 
     .slick-list {
-        padding-left: 30px;
         padding-left: 30px;
     }
 }

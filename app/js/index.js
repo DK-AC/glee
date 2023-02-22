@@ -65,6 +65,16 @@ $(function () {
         $('.catalog__items-grid').removeClass('catalog__items-list')
     })
 
+    $('.product-details__btn').on('click', function () {
+        $('.product-details__btn').removeClass('product-details__btn--active')
+        $(this).addClass('product-details__btn--active')
+    })
+
+    $('.filter-btns__btn').on('click', function () {
+        $('.filter-btns__btn').removeClass('filter-btns__btn--active')
+        $(this).addClass('filter-btns__btn--active')
+    })
+
 })
 
 
