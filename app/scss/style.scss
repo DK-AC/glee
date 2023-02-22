@@ -1527,6 +1527,40 @@
     &__content {
         width: 550px;
     }
+
+    &__info {
+        padding-top: 100px;
+    }
+
+    &__btns {
+        display: flex;
+        justify-content: center;
+        column-gap: 15px;
+        margin-bottom: 35px;
+    }
+
+    &__btn {
+        border-radius: 5px;
+        width: 241px;
+        height: 53px;
+        color: $title;
+        background-color: #edf1f4;
+        @extend %btn;
+        font-size: 18px;
+        @extend %rubik-500;
+        transition: all .3s;
+
+        &:hover {
+            background-color: $primary;
+            color: #ffffff;
+            transition: all .3s;
+        }
+    }
+
+    &__text {
+        @extend %rubik-400;
+        color: $title;
+    }
 }
 
 .product-slide {
