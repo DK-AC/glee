@@ -1,0 +1,112 @@
+@media (max-width: 1200px) {
+    .menu {
+        padding-left: 0;
+
+        &__list-item + .menu__list-item {
+            margin-left: 20px;
+        }
+    }
+}
+
+@media (max-width: 960px) {
+
+    .logo {
+        margin-left: 60px;
+        order: 2;
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+        order: -1;
+
+        &__list {
+            transform: translateY(-400px);
+            transition: all .3s;
+            margin: 0 auto;
+            position: absolute;
+            top: 140px;
+            width: 100%;
+            left: 0;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__list-item {
+            width: 100%;
+            text-align: center;
+        }
+
+        &__list-link {
+            font-size: 18px;
+            line-height: 35px;
+            padding: 12px 0;
+        }
+
+        &__list--active {
+            transform: translateX(0);
+            transition: all .3s;
+        }
+
+        &__list-item + .menu__list-item {
+            margin-left: 0px;
+        }
+
+        &__btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: transparent;
+            cursor: pointer;
+            position: absolute;
+            width: 30px;
+            height: 22px;
+            border: none;
+
+
+            &:after,
+            &:before,
+            span {
+                content: '';
+                width: 100%;
+                background-color: black;
+                height: 3px;
+                position: absolute;
+            }
+
+            &:after {
+                top: 0;
+            }
+
+            &:before {
+                bottom: 0;
+            }
+        }
+    }
+    .user-nav {
+        margin-left: auto;
+        margin-right: 60px;
+        order: 3;
+    }
+}
+
+@media (max-width: 640px) {
+
+    .logo {
+        margin: 0 auto;
+
+    }
+    .user-nav {
+        width: 100%;
+        order: 3;
+        justify-content: flex-end;
+        margin-right: 0px;
+        margin-top: 20px;
+    }
+
+    .menu {
+        &__list {
+            top: 200px;
+        }
+    }
+}
