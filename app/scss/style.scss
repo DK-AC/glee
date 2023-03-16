@@ -10,11 +10,16 @@
         justify-content: space-between;
         align-items: center;
         padding: 50px 0;
+        flex-wrap: wrap;
     }
 }
 
 .menu {
     padding-left: 150px;
+
+    &__btn {
+        display: none;
+    }
 
     &__list {
         display: flex;
@@ -25,7 +30,7 @@
     }
 
     &__list-link {
-        font-size: 15px;
+        font-size: 20px;
         line-height: 12px;
         text-transform: capitalize;
         color: $accent;
